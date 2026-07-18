@@ -1,0 +1,114 @@
+/* --- Projects Main Layout --- */
+.projects-container {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 10%;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-header h2 {
+    font-size: 36px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.projects-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Projects Dynamic Grid --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* --- Multi-Flex Project Card Layout --- */
+.project-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes meta content down */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, border-color 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.project-info h3 {
+    font-size: 22px;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* --- Metadata Chips & Actions --- */
+.project-meta {
+    margin-top: auto;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: var(--accent-hover);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 40px 5%;
+    }
+    .projects-header h2 {
+        font-size: 28px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack into single column on mobile */
+    }
+}

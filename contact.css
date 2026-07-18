@@ -1,0 +1,103 @@
+/* --- Contact Layout Wrapper --- */
+.contact-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    padding: 60px 10%;
+}
+
+/* --- Card Background Structure --- */
+.contact-box {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.contact-box h2 {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* --- Form Flow Controls --- */
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.custom-form input, .custom-form textarea {
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Smooth Focus Rings */
+.custom-form input:focus, .custom-form textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* --- Action Button --- */
+.submit-btn {
+    padding: 14px;
+    background-color: var(--accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- Mobile View Settings --- */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 40px 5%;
+    }
+    .contact-box {
+        padding: 25px;
+    }
+    .contact-box h2 {
+        font-size: 26px;
+    }
+}

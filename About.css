@@ -1,0 +1,96 @@
+/* --- About Layout Container --- */
+.about-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    padding: 60px 10%;
+}
+
+/* --- Content Card Profile --- */
+.about-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 750px;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.about-card h2 {
+    font-size: 36px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Sub-border under the section header */
+.about-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.intro-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.bio-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Action Link Styles --- */
+.about-cta {
+    margin-top: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- Breakpoints for Tablet/Mobile --- */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 40px 5%;
+    }
+    .about-card {
+        padding: 25px;
+    }
+    .about-card h2 {
+        font-size: 28px;
+    }
+    .intro-text {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Egyir Aldrich Edwin</title>
+    <!-- FontAwesome for layout icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="contact.css"> <!-- Dedicated CSS file -->
+</head>
+<body>
+
+    <!-- Shared Navigation -->
+    <header class="navbar">
+        <div class="logo">EAE.dev</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="toggle-btn"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <!-- Contact Form Content -->
+    <main class="contact-container">
+        <div class="contact-box">
+            <h2>Get In Touch</h2>
+            <p class="subtitle">Have a question or want to work together? Drop a message below!</p>
+            
+            <form id="contact-form" class="custom-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Type your message here..." rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer>
+        <p>&copy; 2026 Egyir Aldrich Edwin. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

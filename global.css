@@ -1,0 +1,113 @@
+/* --- CSS Design Tokens & Themes --- */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f6f9;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --accent: #0077ff;
+    --accent-hover: #0055cc;
+    --border-color: #e2e8f0;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --text-main: #f7fafc;
+    --text-muted: #a0aec0;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border-color: #2d3748;
+}
+
+/* --- Core Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Navigation Layout --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* --- Sticky Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-top: 12px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 15px 5%; }
+    .nav-links { display: none; } /* We can create a mobile hamburger toggle here later */
+}
